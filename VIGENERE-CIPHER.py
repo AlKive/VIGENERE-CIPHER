@@ -67,3 +67,10 @@ print(Fore.LIGHTCYAN_EX + "=" * 100)
 for line in c_art.split("\n"):
     print(line.center(50))
 print(Fore.LIGHTCYAN_EX + "=" * 100)
+
+# getting the user's input (message and key)
+print(Fore.YELLOW + 'Enter a message: ')
+plaintext = input(Fore.BLUE)
+print(Fore.YELLOW + 'Enter a key: ')
+key = input(Fore.BLUE)
+
