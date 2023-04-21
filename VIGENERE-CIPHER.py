@@ -35,3 +35,11 @@ def _encrypt_decrypt_char(PlainTextChar, KeyChar, mode='encrypt'):
         # Getting the index and ASCII code of the plain text and keyword
         old_char_position = ord(PlainTextChar) - ord(firstLetter)
         key_char_position = ord(KeyChar.lower()) - ord('a')
+    
+        if mode == 'encrypt':
+            new_char_position = (old_char_position + key_char_position) % 26
+        else:  # this section if for the decryption, but i've decided that i will only display the encypted/ciphertext at the end
+            new_char_position = (old_char_position -
+                                 key_char_position + 26) % 26
+        return chr(new_char_position + ord(firstLetter))
+    return PlainTextChar
