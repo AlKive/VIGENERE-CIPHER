@@ -85,3 +85,15 @@ color = "magenta"
 output = pyfiglet.figlet_format(text, font=font, width=200)
 outputColor = colored(output, color)
 
+# Displaying Output/Ciphertext
+time.sleep(2)
+print("=" * 100)
+print(Fore.LIGHTWHITE_EX + line.center(35) + "The Ciphertext is... ")
+print(Fore.LIGHTCYAN_EX + "=" * 100)
+time.sleep(2)
+for line in outputColor.split("\n"):
+    print(line.center(80))
+print(Fore.LIGHTCYAN_EX + "=" * 100)
+
+print(Fore.YELLOW + "Ciphertext: " + Fore.LIGHTGREEN_EX + ciphertext)
+
