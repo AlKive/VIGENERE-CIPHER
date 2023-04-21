@@ -32,3 +32,6 @@ def _encrypt_decrypt_char(PlainTextChar, KeyChar, mode='encrypt'):
         firstLetter = 'a'
         if PlainTextChar.isupper():
             firstLetter = 'A'
+        # Getting the index and ASCII code of the plain text and keyword
+        old_char_position = ord(PlainTextChar) - ord(firstLetter)
+        key_char_position = ord(KeyChar.lower()) - ord('a')
