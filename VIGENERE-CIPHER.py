@@ -50,3 +50,11 @@ def encrypt(plaintext, key):
     for PlainTextChar, KeyChar in zip(plaintext, user_key):
         ciphertext += _encrypt_decrypt_char(PlainTextChar, KeyChar)
     return ciphertext
+
+def decrypt(ciphertext, key):
+    plaintext = ''
+    user_key = _user_text(ciphertext, key)
+    for ciphertext_char, KeyChar in zip(ciphertext, user_key):
+        plaintext += _encrypt_decrypt_char(ciphertext_char,
+                                           KeyChar, mode='decrypt')
+    return plaintext
