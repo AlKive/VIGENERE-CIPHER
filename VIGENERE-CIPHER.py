@@ -78,3 +78,10 @@ key = input(Fore.BLUE)
 ciphertext = encrypt(plaintext, key)
 decrypted_plaintext = decrypt(ciphertext, key)  # this will not get displayed
 
+# formatting/designing the output display
+text = ciphertext
+font = "bubble"
+color = "magenta"
+output = pyfiglet.figlet_format(text, font=font, width=200)
+outputColor = colored(output, color)
+
