@@ -43,3 +43,10 @@ def _encrypt_decrypt_char(PlainTextChar, KeyChar, mode='encrypt'):
                                  key_char_position + 26) % 26
         return chr(new_char_position + ord(firstLetter))
     return PlainTextChar
+
+def encrypt(plaintext, key):
+    ciphertext = ''
+    user_key = _user_text(plaintext, key)
+    for PlainTextChar, KeyChar in zip(plaintext, user_key):
+        ciphertext += _encrypt_decrypt_char(PlainTextChar, KeyChar)
+    return ciphertext
