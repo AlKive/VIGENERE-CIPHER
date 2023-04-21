@@ -74,3 +74,7 @@ plaintext = input(Fore.BLUE)
 print(Fore.YELLOW + 'Enter a key: ')
 key = input(Fore.BLUE)
 
+#encrypting and decrypting
+ciphertext = encrypt(plaintext, key)
+decrypted_plaintext = decrypt(ciphertext, key)  # this will not get displayed
+
