@@ -20,3 +20,15 @@ def _user_text(plaintext, key):
         else:
             user_key += ' '
     return user_key
+
+'''this function includes the algorithm that is based on vigerene cipher fomula.
+ The encryption equation (E) for a Vigenere cipher: 
+ #Cipher text, C = E (K, P) = (Pi + Ki) mod 26. 
+ Here Ci, Pi, and Ki denote the offset of the ith character of cipher text, plain text, and key.'''
+
+
+def _encrypt_decrypt_char(PlainTextChar, KeyChar, mode='encrypt'):
+    if PlainTextChar.isalpha():
+        firstLetter = 'a'
+        if PlainTextChar.isupper():
+            firstLetter = 'A'
