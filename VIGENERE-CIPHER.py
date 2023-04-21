@@ -58,3 +58,12 @@ def decrypt(ciphertext, key):
         plaintext += _encrypt_decrypt_char(ciphertext_char,
                                            KeyChar, mode='decrypt')
     return plaintext
+
+# formatting the header
+art = figlet_format(" THE VIGENERE CIPHER", font='bubble', width=100)
+c_art = colored(art, 'magenta')
+
+print(Fore.LIGHTCYAN_EX + "=" * 100)
+for line in c_art.split("\n"):
+    print(line.center(50))
+print(Fore.LIGHTCYAN_EX + "=" * 100)
